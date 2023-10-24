@@ -49,12 +49,12 @@ public class CountingSumPairs {
 
         for (int i = 0; i < uniqueNumberList.size(); i++) {
             // if list is in ascending order and i is equal to x or greater than x or then there will be no more matching pairs
-            if (uniqueNumberList.get(i) > x || uniqueNumberList.get(i) == x) {
+            if (uniqueNumberList.get(i) >= x) {
                 return matchingPairs;
             }
             for (int j = i + 1; j < uniqueNumberList.size(); j++) {
                 // if i + j are greater than x then break second loop and move onto next in list
-                // we do not break from all loops as first and last number may be greater than x whilst second and third number are equal to x
+                // we do not break from all loops as first and fourth number may be greater than x whilst second and third number are equal to x
                 if (uniqueNumberList.get(i) + uniqueNumberList.get(j) > x) {
                     break;
                 }
